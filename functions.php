@@ -1,12 +1,15 @@
 <?php
 
+/* Hide Admin Bar */
+show_admin_bar( false );
+
 /*  Register Scripts and Style */
 
 function theme_register_scripts() {
-    wp_enqueue_style( 'mr_blankie-css', get_stylesheet_uri() );
-    wp_enqueue_script( 'mr_blankie-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/scripts.min.js' ), array( 'jquery' ), '1.0', true );
+    wp_enqueue_style( 'mr_blankie-css', get_stylesheet_uri(), false);
+    wp_enqueue_script( 'mr_blankie-js', get_template_directory_uri() . '/js/scripts.min.js', false );
 }
-add_action( 'wp_enqueue_scripts', 'theme_register_scripts', 1 );
+add_action( 'wp_enqueue_scripts', 'theme_register_scripts' );
 
 
 /* Add menu support */
