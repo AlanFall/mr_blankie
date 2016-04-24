@@ -15,16 +15,6 @@ Just put mr_blankie folder in the themes folder and run "npm install" to install
 npm install
 ```
 
-##Gulp Plugins
-
-1. AutoPrefixer
-2. ImageMin
-3. LiveReload
-4. Sass
-5. Sourcemaps
-6. Uglifyjs
-7. ImageMin-PngQuant
-
 ## Features
 
 Most of the features are in gulp. This theme has almost no styling. You only have `clearfix` defined and `_reset.scss` from Eric Mayer as a partial and some empty scss partials.
