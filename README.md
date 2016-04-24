@@ -15,9 +15,21 @@ Just put mr_blankie folder in the themes folder and run "npm install" to install
 npm install
 ```
 
-## Features
+## Structure
 
-Most of the features are in gulp. This theme has almost no styling. You only have `clearfix` defined and `_reset.scss` from Eric Mayer as a partial and some empty scss partials.
+All CSS files are processed using using SASS.
+
+- _fonts.scss
+- _footer.scss
+- _globals.scss
+- _headers.scss
+- _homepage.scss
+- _mixins.scss
+- _reset.scss
+- _sidebar.scss
+- _variables.scss
+- _responsive.scss
+
 
 ### Gulp features
 
@@ -28,7 +40,7 @@ Most of the features are in gulp. This theme has almost no styling. You only hav
 * Uglifying and concatinating all js files
 * LiveReload
 
-All of these features are run when starting `gulp watch` except for image optimization, you have to run that task separatley.
+All of these features are run when starting `gulp`
 
 ### Some mixins and functions
 
@@ -37,5 +49,3 @@ You have several mixins and functions in the `_mixins.scss` file along with comm
 * Automatic calculation of percentages from pixels
 * Automatic calculations of rems from pixels 
 * Easy to use Media Queries in your normal css flow
-
-Open an issue for any problems that you encounter. 
