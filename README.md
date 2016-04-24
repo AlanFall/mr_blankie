@@ -29,6 +29,9 @@ All CSS files are processed using using SASS.
 - _sidebar.scss
 - _variables.scss
 - _responsive.scss
+- style.scss
+
+All styles are imported in style.scss then to style.css which gets minimized.
 
 
 ### Gulp features
