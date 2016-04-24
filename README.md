@@ -9,13 +9,21 @@ Mr.Blankie is a blank wordpress project created by Alan Fall for fast wordpress 
 
 ## Installation
 
-Just put mr_blankie folder in the themes folder and run "npm install".
+Just put mr_blankie folder in the themes folder and run "npm install" to install all gulp plugins.
 
 ```shell
 npm install
 ```
 
-to install all gulp plugins.
+##Gulp Plugins
+
+1. AutoPrefixer
+2. ImageMin
+3. LiveReload
+4. Sass
+5. Sourcemaps
+6. Uglifyjs
+7. ImageMin-PngQuant
 
 ## Features
 
