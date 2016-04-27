@@ -7,10 +7,18 @@ sourcemaps = require('gulp-sourcemaps'),
 sass = require('gulp-sass'),
 livereload = require('gulp-livereload');
 
+// Set Folders
+var 
+	images = "./images/*",
+	lib = "./js/lib/*.js",
+	js = "./js/*.js",
+	sass = "sass/**/*.scss";
+
+
 
 gulp.task('compressimg', function() {
 	console.log('Lets Compress some Images!');
-	gulp.src('images/*')
+	gulp.src(images)
 		.pipe(imagemin({
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
@@ -22,13 +30,13 @@ gulp.task('compressimg', function() {
 
 gulp.task('uglifyjs', function() {
 	console.log('Lets Minify Some Javascript!');
-	gulp.src('js/lib/*.js')
+	gulp.src(lib)
 		.pipe(uglify('scripts.min.js'))
-    	.pipe(gulp.dest('js'));
+    	.pipe(gulp.dest('./js'));
 });
 
 gulp.task('sass', function() {
-	gulp.src('sass/**/*.scss')
+	gulp.src(sass)
 		.pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
@@ -38,9 +46,9 @@ gulp.task('sass', function() {
 
 gulp.task('watch', function() {
 	livereload.listen();
-	gulp.watch('lib/*.js',['uglifyjs']);
-	gulp.watch('sass/**/*.scss',['sass']);
-	gulp.watch(['style.css', '*.php', 'js/*.js', 'parts/**/*.php'], function (files){
+	gulp.watch('js',['uglifyjs']);
+	gulp.watch('sass',['sass']);
+	gulp.watch(['style.css', '*.php', js, 'parts/**/*.php'], function (files){
 		livereload.changed(files);
 	});
 });
