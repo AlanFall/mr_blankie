@@ -52,5 +52,3 @@ You have several mixins and functions in the `_mixins.scss` file along with comm
 * Automatic calculation of percentages from pixels
 * Automatic calculations of rems from pixels 
 * Easy to use Media Queries in your normal css flow
-
-team
