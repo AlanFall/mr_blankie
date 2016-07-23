@@ -8,7 +8,7 @@ sass = require('gulp-sass'),
 livereload = require('gulp-livereload');
 
 // Set Folders
-var 
+var
 	images = "./images/*",
 	lib = "./js/lib/*.js",
 	js = "./js/*.js",
@@ -37,8 +37,9 @@ gulp.task('uglifyjs', function() {
 
 gulp.task('sass', function() {
 	gulp.src(sassDir)
+		gulp.src('./scss/style.scss')
 		.pipe(sourcemaps.init())
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  	.pipe(sass({includePaths: ['./scss']}).on('error', sass.logError))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./'))
@@ -53,4 +54,4 @@ gulp.task('watch', function() {
 	});
 });
 
-gulp.task('default', ['uglifyjs', 'compressimg', 'watch']);
+gulp.task('default', ['sass','uglifyjs', 'compressimg', 'watch']);

@@ -1,0 +1,35 @@
+//// Partials
+
+// Wordpress
+
+@import 'partials/wordpress';
+
+@import 'partials/variables';
+@import 'partials/reset';
+@import 'partials/grid';
+@import 'partials/fonts';
+@import 'partials/bits';
+@import 'partials/plugins';
+
+// For Print
+@import 'partials/print';
+
+
+//// Website
+
+@import 'website/header';
+@import 'website/footer';
+@import 'website/shared';
+@import 'website/homepage';
+@import 'website/pages';
+
+
+//// Load Responsive Styles
+
+// @import 'website/responsive-extra'; }
+
+@media (max-width: 1600px) { @import 'website/responsive-xl'; }
+@media (max-width: 1200px) { @import 'website/responsive-l';  }
+@media (max-width: 1024px) { @import 'website/responsive-m';  }
+@media (max-width: 768px)  { @import 'website/responsive-s';  }
+@media (max-width: 320px)  { @import 'website/responsive-xs'; }
