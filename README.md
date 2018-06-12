@@ -1,4 +1,4 @@
-#MR.BLANKIE!
+## MR.BLANKIE!
 Hello from Mr.Blankie!
 Mr.Blankie is a blank wordpress project created by Alan Fall for fast wordpress development.
 
